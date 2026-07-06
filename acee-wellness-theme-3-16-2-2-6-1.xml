@@ -8,13 +8,17 @@
     <link crossorigin='anonymous' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' rel='stylesheet'/>
     <script crossorigin='anonymous' integrity='sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz' src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
 
-    <b:skin version='1.3.3'><![CDATA[/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,option,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[type=button][disabled],input[type=reset][disabled],input[type=submit][disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}.
+    <b:skin version='1.3.3'><![CDATA[
+/* normalize.css v3.0.1 | MIT License */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-wrap:break-word;word-break:break-word;word-wrap:break-word}
+a{background-color:transparent}
+.hidden{display:none}
+.invisible{visibility:hidden}
+.container::after,.float-container::after{clear:both;content:"";display:table}
+.clearboth{clear:both}
 
-/*
-<!-- Navigation Menu Styling -->
-*/
-
-/* Main Navigation Container */
+/* Navigation Menu Styling */
 .PageList {
   background: linear-gradient(135deg, #1a4d4d 0%, #0d3333 100%);
   padding: 20px 15px;
@@ -80,12 +84,12 @@
 
 /* About Us Icon */
 .PageList li:nth-child(2) a::before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="8" r="4"/><path d="M12 14c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
 }
 
 /* Life Coaching Icon */
 .PageList li:nth-child(3) a::before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>');
 }
 
 /* Coaching Programs Icon */
@@ -95,12 +99,12 @@
 
 /* 1:1 Coaching Icon */
 .PageList li:nth-child(5) a::before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 2.05 1.97 3.55v2h6v-2c0-2.66-5.33-4-8-4z"/></svg>');
 }
 
 /* Group Coaching Icon */
 .PageList li:nth-child(6) a::before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 2.05 1.97 3.55v2h6v-2c0-2.66-5.33-4-8-4z"/></svg>');
 }
 
 /* Workshops & Events Icon */
@@ -125,7 +129,7 @@
 
 /* Contact Us Icon */
 .PageList li:nth-child(11) a::before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16700512 C3.34915502,0.9099075 2.40734225,0.9099075 1.77946707,1.44161685 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99701575 L3.03521743,10.4379088 C3.03521743,10.5950061 3.19218622,10.7521035 3.50612381,10.7521035 L16.6915026,11.5375905 C16.6915026,11.5375905 17.1624089,11.5375905 17.1624089,12.0088826 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16126654 C3.34915502,0.9041691 2.40734225,1.01544225 1.77946707,1.4767344 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99701575 L3.03521743,10.4380088 C3.03521743,10.5951062 3.19218622,10.7522035 3.50612381,10.7522035 L16.6915026,11.5376905 C16.6915026,11.5376905 17.1624089,11.5376905 17.1624089,12.0089827 C17.1624089,12.4802748 16.6915026,12.4744748 16.6915026,12.4744748 Z"/></svg>');
 }
 
 /* Arrow indicators for expandable items */
@@ -226,75 +230,44 @@
     margin-right: 12px;
   }
 }
-
-/* Standard Blogger Styles */
-body{
-overflow-wrap:break-word;
-word-break:break-word;
-word-wrap:break-word
-}
-.hidden{
-display:none
-}
-.invisible{
-visibility:hidden
-}
-.container::after,.float-container::after{
-clear:both;
-content:"";
-display:table
-}
-.clearboth{
-clear:both
-}
-#comments .comment .comment-actions,.subscribe-popup .FollowByEmail .follow-by-email-submit,.widget.Profile .profile-link,.widget.Profile .profile-link.visit-profile{
-background:0 0;
-border:0;
-box-shadow:none;
-color:$(body.link.color);
-cursor:pointer;
-font-size:14px;
-font-weight:700;
-outline:0;
-text-decoration:none;
-text-transform:uppercase;
-width:auto
-}
-.dim-overlay{
-background-color:rgba(0,0,0,.54);
-height:100vh;
-left:0;
-position:fixed;
-top:0;
-width:100%
-}
-#sharing-dim-overlay{
-background-color:transparent
-}
 ]]></b:skin>
   </head>
   <body>
-    <div class='PageList'>
-      <ul>
-        <li><a href='#'>Home</a></li>
-        <li><a href='#'>About Us</a></li>
-        <li><a href='#'>Life Coaching</a></li>
-        <li><a href='#'>Coaching Programs</a></li>
-        <li><a href='#'>1:1 Coaching</a></li>
-        <li><a href='#'>Group Coaching</a></li>
-        <li><a href='#'>Workshops & Events</a></li>
-        <li><a href='#'>Resources</a></li>
-        <li><a href='#'>Success Stories</a></li>
-        <li><a href='#'>Blog & Insights</a></li>
-        <li><a href='#'>Contact Us</a></li>
-        <li><a href='#' class='book-session-btn'>Book a Session</a></li>
-      </ul>
-      <div class='social-footer'>
-        <a href='#' class='social-icon' title='Instagram'>📷</a>
-        <a href='#' class='social-icon' title='Facebook'>f</a>
-        <a href='#' class='social-icon' title='LinkedIn'>in</a>
-        <a href='#' class='social-icon' title='YouTube'>▶</a>
+    <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+      <b:widget id='Header1' locked='true' title='A.Cee Wellness' type='Header'/>
+    </b:section>
+    
+    <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+      <div class='PageList'>
+        <ul>
+          <li><a href='#'>Home</a></li>
+          <li><a href='#'>About Us</a></li>
+          <li><a href='#'>Life Coaching</a></li>
+          <li><a href='#'>Coaching Programs</a></li>
+          <li><a href='#'>1:1 Coaching</a></li>
+          <li><a href='#'>Group Coaching</a></li>
+          <li><a href='#'>Workshops &amp; Events</a></li>
+          <li><a href='#'>Resources</a></li>
+          <li><a href='#'>Success Stories</a></li>
+          <li><a href='#'>Blog &amp; Insights</a></li>
+          <li><a href='#'>Contact Us</a></li>
+          <li><a href='#' class='book-session-btn'>Book a Session</a></li>
+        </ul>
+        <div class='social-footer'>
+          <a href='#' class='social-icon' title='Instagram'>📷</a>
+          <a href='#' class='social-icon' title='Facebook'>f</a>
+          <a href='#' class='social-icon' title='LinkedIn'>in</a>
+          <a href='#' class='social-icon' title='YouTube'>▶</a>
+        </div>
       </div>
-    </div>
+    </b:section>
+
+    <b:section class='main' id='main' showaddelement='yes'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+    </b:section>
+
+    <b:section class='footer' id='footer' showaddelement='yes'>
+      <b:widget id='Footer1' locked='true' title='Footer' type='Footer'/>
+    </b:section>
   </body>
 </html>
